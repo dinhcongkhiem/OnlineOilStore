@@ -1,0 +1,72 @@
+version: '3'
+
+networks:
+  backend:
+  network:
+
+services:
+  db:
+    image: postgres:16.2-alpine
+    container_name: shop_db
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=khiem2004
+      - POSTGRES_DB=shop
+      - TZ=UTC
+    ports:
+      - '5432:5432'
+    volumes: 
+      - ./db/postgresql:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  app:
+    build:
+      context: ./shop_online_be
+      dockerfile: Dockerfile
+    container_name: backend_container
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/shop
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=khiem2004
+
+      - FRONTEND_HOST=https://8f6d-2001-ee0-820a-6e82-ac64-722b-5a42-e227.ngrok-free.app
+      - NAME_SHOP=Nameshopdemo
+      - EMAIL_SHOP=admin@khiemcongdinh.id.vn
+      - CC_GMAIL_SHOP=khiemcongdinh@gmail.com
+
+      - GHTK_API_KEY=2a5601c2c9c772d2aca14c2d52d25bce6020b8f2
+      - GHTK_URL=https://services-staging.ghtklab.com
+      - GHTK_PICK_NAME=Nguyeenx Vanw á
+      - GHTK_PICK_TEL=0123456789
+      - GHTK_PICK_PROVINCE=Hà Nội
+      - GHTK_PICK_DISTRICT=Chương Mỹ
+      - GHTK_PICK_WARD=Trần Phú
+      - GHTK_PICK_ADDRESS=Gần chùa Thôn Nghè
+      
+    networks:
+      - backend
+      - network
+
+  nginx:
+    build:
+      context: ./shop_online_fe
+      dockerfile: Dockerfile
+      args:
+        - REACT_APP_SERVER_HOST=http://localhost:8080/api/v1
+        - REACT_APP_ADDRESS_URL=https://esgoo.net/api-tinhthanh/
+
+    container_name: customer_frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+    networks:
+      - network
+
+ 

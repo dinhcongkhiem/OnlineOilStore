@@ -1,0 +1,16 @@
+.wrapper {
+    display: inline-flex;
+    justify-content: center;
+    border: 0.1rem solid #bebdbd;
+    border-radius: 0.6rem;
+    margin-right: 1rem;
+    padding: .1rem .2rem;
+    transition: all .3s;
+
+   
+}
+.checked {
+    background-color: var(--secondary);
+    color: var(--white);
+    
+}

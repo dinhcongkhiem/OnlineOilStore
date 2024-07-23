@@ -1,0 +1,43 @@
+.update-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.delivery {
+
+    td {
+        &:nth-child(2) {
+            text-align: center;
+            width: 20%;
+            font-weight: 600;
+        }
+
+
+        &:nth-child(4) {
+            text-align: start;
+        }
+        &:nth-child(3) {
+            text-align: start;
+            width: 22%;
+        }
+
+        &:nth-child(5) {
+            width: 15%;
+        }
+
+        &:nth-child(6) {
+            width: 10%;
+        }
+
+    }
+}
+:global {
+    .css-b62m3t-container {
+        width: 19.68rem;
+    }
+
+}

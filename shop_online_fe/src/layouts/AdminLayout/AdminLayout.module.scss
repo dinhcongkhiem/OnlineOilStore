@@ -1,0 +1,100 @@
+.wrapper {
+    background-color: var(--white);
+
+    .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.7rem;
+        background-color: #F5FBF6;
+
+    }
+
+    .content {
+        width: 100%;
+        margin-bottom: 2.5rem;
+        background-color: var(--white);
+        margin: 1.5rem 2rem;
+        padding-bottom: 2rem;
+        @media (max-width: 740px) {
+            margin: 1.5rem 0;
+        }
+
+    }
+
+    .navbar {
+        border-bottom: 1px solid var(--primary);
+        padding-left: 5rem;
+
+        @media (max-width: 740px) {
+            border: none;
+            margin: 0;
+            padding: 0;
+            padding-top: 2rem;
+        }
+
+        ul {
+            display: flex;
+
+            &> :first-child {
+                a {
+                    border-right: 0;
+                }
+            }
+        }
+
+        li {
+            @media (max-width: 740px) {
+                display: inline-block;
+            }
+
+        }
+
+        a {
+            display: block;
+            border: 1px solid var(--primary);
+            border-top: 0;
+            border-bottom: 0;
+            padding: .8rem 3rem;
+            cursor: pointer;
+            color: var(--primary);
+            font-weight: 600;
+            transition: all .3s;
+            opacity: .5;
+            @media (max-width: 840px) {
+                font-size: 1.3rem;
+                padding: .8rem 1rem;
+
+            }
+
+            @media (max-width: 740px) {
+                font-size: 1.3rem;
+                padding: .8rem 1rem;
+                display: inline-block;
+                margin-right: .5rem;
+
+            }
+
+            &:hover {
+                background-color: var(--hover-background);
+                color: var(--white);
+                opacity: 1 !important;
+
+            }
+
+            &:active {
+                opacity: .5 !important;
+            }
+
+        }
+    }
+
+}
+
+
+
+.active {
+    background-color: var(--hover-background) !important;
+    color: var(--white) !important;
+    border: var(--hover-background) !important;
+    opacity: 1 !important;
+}

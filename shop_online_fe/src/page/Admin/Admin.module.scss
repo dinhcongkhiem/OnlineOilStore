@@ -1,0 +1,171 @@
+.wrapper {
+    font-size: 1.44rem;
+    padding-top: 3rem;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    // Status bg-color
+    --cancel-background-color: #FFCFC9;
+    --order-received-background-color: #D4EDBC;
+    --pending-background-color: #FFE5A0;
+    //status color
+    --cancel-color: #B60D09;
+    --order-received-color: #228362;
+    --pending-color: #463720;
+
+    // border Color 
+    --border-table-color: #ececec;
+
+    .options {
+        width: 100%;
+        display: flex;
+        min-width: 107.5rem;
+        padding: 1rem;
+        justify-content: space-between;
+        padding: 0 3rem;
+        padding-bottom: 1.5rem;
+
+        .option {
+            display: flex;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .title {
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: .5rem;
+            flex-basis: 10%;
+        }
+
+        .checkbox-status {
+            display: flex;
+            gap: 2rem;
+            user-select: none;
+
+            .checkbox {
+                cursor: pointer;
+
+                &:hover {
+                    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                }
+
+                &:active {
+                    opacity: .4;
+                }
+            }
+        }
+
+    }
+
+    table {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        border-spacing: 0;
+        border: 4px solid var(--border-table-color);
+        min-width: 107.5rem;
+
+        ul {
+            list-style: circle;
+            list-style-position: inside;
+        }
+
+        th {
+            padding: 1rem 0;
+            text-transform: uppercase;
+            border: .5px solid var(--border-table-color);
+            border-bottom: 3px solid var(--border-table-color);
+            // border-top: 5px solid var(--border-table-color);
+
+
+        }
+
+        td {
+            padding: .6rem;
+            border: .5px solid var(--border-table-color);
+            border-top: 0;
+            border-bottom: 2px solid var(--border-table-color);
+
+            .nameCustomer {
+                font-weight: 500;
+            }
+
+        }
+
+        .status {
+            span {
+                display: block;
+                width: 100%;
+                margin-bottom: 0.3rem;
+                border-radius: 0.5rem;
+                font-weight: 500;
+                min-width: 12.2rem
+            }
+
+            .pending {
+                background-color: var(--pending-background-color);
+                color: var(--pending-color);
+            }
+
+            .order-received {
+                background-color: var(--order-received-background-color);
+                color: var(--order-received-color);
+
+            }
+
+            .canceled {
+                background-color: var(--cancel-background-color);
+                color: var(--cancel-color);
+            }
+
+
+        }
+
+        .action {
+            .action-btn {
+                border: 1px solid var(--secondary);
+                display: block;
+                width: 100%;
+                padding: 0 .5rem;
+                margin-bottom: 0.3rem;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            &> :first-child {
+                border-color: var(--order-received-color);
+
+                &:hover {
+                    background-color: var(--order-received-background-color);
+                }
+
+            }
+
+            &> :nth-child(2) {
+                border-color: var(--pending-color);
+
+                &:hover {
+                    background-color: var(--pending-background-color);
+                }
+
+                &:active {
+                    opacity: .8;
+                }
+            }
+
+            &> :last-child {
+                border-color: var(--cancel-color);
+
+                &:hover {
+                    background-color: var(--cancel-background-color);
+                }
+
+                &:active {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,223 @@
+.section-heading {
+    display: flex;
+    justify-content: center;
+    background-color: var(--white);
+
+
+
+    .hidden-block {
+        min-width: 212px;
+
+        @media (max-width: 740px) {
+            display: none;
+
+        }
+    }
+
+    .middle-block {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .slider {
+        width: 73%;
+
+        @media (max-width: 850px) {
+            width: 100%;
+
+        }
+    }
+
+    .cooperate {
+        div {
+            width: 230px;
+            height: 200px;
+        }
+
+        @media (max-width: 850px) {
+            display: none;
+        }
+    }
+
+    .right-block {
+        padding: 20px 10px;
+        max-width: 16.6%;
+
+        @media (max-width: 850px) {
+            display: none;
+        }
+
+        .title {
+
+            color: var(--secondary);
+
+            h3 {
+                text-transform: uppercase;
+                font-size: 1.28rem;
+            }
+
+            b {
+                background-color: currentColor;
+                display: block;
+                flex: 1;
+                height: 2px;
+                opacity: .1;
+            }
+
+            span {
+                margin: 0 15px;
+                display: block;
+                padding: 10px 0;
+            }
+        }
+
+        .content {
+            display: flex;
+            margin-bottom: 25px;
+
+            .content-wrapper {
+                margin-top: 5px;
+            }
+
+            .icon {
+                margin-top: 15px;
+                width: 70px;
+            }
+
+            p {
+                font-size: 1.28rem;
+                color: var(--secondary);
+                line-height: 18px;
+                margin-top: 7px;
+                
+            }
+        }
+
+        .contact {
+            padding-top: 10px;
+            display: flex;
+            gap: 5px;
+            font-size: 1.36rem;
+            border-top: 1px solid var(--secondary);
+
+            .icon {
+                width: 40px;
+                height: 40px;
+
+            }
+
+            .contnet {
+                flex: 1 1 0%;
+            }
+
+            b {
+                color: var(--primary);
+                font-weight: 800;
+            }
+        }
+
+    }
+}
+
+.section-content {
+    // display: flex;
+    width: 100%;
+}
+
+.hotdeal-section {
+    background-color: var(--white);
+    margin-top: 1.5rem;
+    overflow: hidden;
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0;
+        border-bottom: 1px solid #ececec;
+        border-top: 3px solid #fba262;
+
+        .title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-right: 15px;
+            border-bottom: 0 solid rgba(0, 0, 0, .1);
+            margin-bottom: 0;
+            padding: 8px 10px;
+        }
+
+        .more {
+            display: block;
+            padding: 4px 8px;
+            border: 1px solid #ececec;
+            margin-right: 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--secondary);
+
+            .icon {
+                margin-left: 10px;
+                margin-top: 4px;
+            }
+
+        }
+    }
+
+    .content-wrapper {
+        padding: 0 6px;
+        border-right: 1px solid #ececec;
+
+        &:hover img {
+            transform: scale(1.1);
+        }
+
+        .box-image {
+            height: 212px;
+            overflow: hidden;
+            width: 212px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all .4s;
+
+            }
+
+
+        }
+
+        .box-text {
+            margin-top: 1rem;
+            overflow: scroll;
+
+            .title-wrapper {
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: var(--secondary);
+                text-transform: uppercase;
+                min-height: 7rem;
+
+                &> :first-child {
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: var(--black);
+
+                }
+
+                &> :last-child {
+                    margin: 8px 0;
+
+                }
+            }
+
+            .price-wrapper {
+                color: #111;
+                font-size: 1.4rem;
+                font-weight: 700;
+            }
+        }
+    }
+}

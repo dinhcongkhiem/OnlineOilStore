@@ -1,0 +1,47 @@
+.property {
+    display: flex;
+    gap: 6rem;
+    margin-top: 2rem;
+
+    .label {
+        font-weight: 600;
+        flex-basis: 20%;
+        @media (max-width: 740px) {
+            flex-basis: 30%;
+        }
+    
+    }
+
+    .options {
+        display: flex;
+        gap: 2rem;
+
+        .prop-value {
+            height: 3rem;
+            cursor: pointer;
+            transition: all .3s;
+        }
+
+        p {
+            border: 1px solid #cecece;
+            padding: 0 1rem;
+            height: 100%;
+            align-content: center;
+            font-size: 1.5rem;
+        }
+
+        span {
+            border: 1px solid #cecece;
+            display: block;
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+
+
+    }
+
+    .selected {
+        border: 1px solid  var(--secondary);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+}

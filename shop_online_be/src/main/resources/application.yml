@@ -1,0 +1,68 @@
+spring:
+    application:
+        name: shop_online_be
+    datasource:
+        url: jdbc:postgresql://localhost:5432/shop
+        username: postgres
+        password: khiem2004
+        driver-class-name: org.postgresql.Driver
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                format_sql: true
+
+        database: postgresql
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+    security:
+        user:
+            name: admin
+            password: admin
+            roles: USER
+    mail:
+        host: pro55.emailserver.vn
+        port: 465
+        username: admin@khiemcongdinh.id.vn
+        password: Khiem_2004
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    starttls:
+                        enable: true
+                        required: true
+                    ssl:
+                        enable: true
+
+
+application:
+    security:
+        jwt:
+            secret-key: b91f042c709d10d15d6ac48f5fe894cde222538fb05f87adc2abc7b738bb4344
+            expiration: 86400000 # a day
+            refresh-token:
+                expiration: 604800000 # 7 days
+
+client:
+    url: ${FRONTEND_HOST}
+
+information:
+    nameShop: ${NAME_SHOP}
+    emailShop: ${EMAIL_SHOP}
+    ccGmailShop: ${CC_GMAIL_SHOP}
+
+
+delivery:
+    apiKey: ${GHTK_API_KEY}
+    apiURL: ${GHTK_URL}
+    pickInfo:
+        pickName: ${GHTK_PICK_NAME}
+        pickTel: ${GHTK_PICK_TEL}
+
+    addressDefault:
+        pickProvince: ${GHTK_PICK_PROVINCE}
+        pickDistrict: ${GHTK_PICK_DISTRICT}
+        pickWard: ${GHTK_PICK_WARD}
+        pickAddress: ${GHTK_PICK_ADDRESS}
+

@@ -1,0 +1,118 @@
+.wrapper-user-info {
+    flex: 1;
+    padding: 3rem 0;
+
+    @media (max-width: 740px) {
+        padding: 0;
+        padding-bottom: 2rem;
+    }
+
+    .title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    label {
+        flex-basis: 20%;
+    }
+
+    .d-flex {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 740px) {
+            flex-direction: column;
+            align-items: flex-start;
+
+        }
+    }
+
+    .row {
+        margin-bottom: 6rem;
+
+        @media (max-width: 840px) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .col {
+        flex-basis: 100%;
+        width: 100%;
+
+        @media (max-width: 740px) {
+            margin-bottom: 0rem !important;
+        }
+    }
+
+    .col-2 {
+        flex-basis: 50%;
+
+        label {
+            flex-basis: 52%;
+        }
+
+        @media (max-width: 740px) {
+            margin-left: 0 !important;
+            flex-basis: 100%;
+            width: 100%;
+
+            &:nth-of-type(1) {
+                margin-bottom: 3rem;
+
+            }
+
+
+        }
+
+
+    }
+
+    .width100-md {
+        @media (max-width: 740px) {
+            width: 100% !important;
+            margin-bottom: 0.5rem;
+        }
+    }
+    .position-relative {
+        position: relative;
+        width: 70%;
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
+    }
+
+    .ques-forget {
+        display: block;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        color: var(--secondary);
+        &:hover {
+            opacity: .8;
+        }
+        &:active {
+            opacity: .4;
+        }
+    }
+
+}
+
+.err-select-address {
+    :global {
+        .css-13cymwt-control {
+            border-color: red;
+            box-shadow: inset rgba(226, 9, 9, 0.16) -5px 5px 4px;
+        }
+    }
+}
+.tooltip-address {
+    background-color: #fd3d3d !important;
+    transform: translate3d(0px, 8px, 10px);
+    font-size: 1.2rem !important;
+    @media (max-width: 740px) {
+        transform: translate3d(0px, 33px, 10px);
+
+    }
+
+}

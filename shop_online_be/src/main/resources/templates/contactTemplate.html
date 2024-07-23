@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Liên hệ</title>
+</head>
+<body>
+<h3>Tên khách hàng: <span th:text="${contactRequest.fullName}"></span> </h3>
+<h3>Địa chỉ: <span th:text="${contactRequest.address}"></span> </h3>
+<h3>Email: <span th:text="${contactRequest.email}"></span> </h3>
+<h3>Số điẹn thoại: <span th:text="${contactRequest.phoneNum}"></span> </h3>
+<p>Nội dùng: <span th:text="${contactRequest.content}"></span> </p>
+
+</body>
+</html>

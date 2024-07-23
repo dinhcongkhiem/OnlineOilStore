@@ -1,0 +1,137 @@
+.wrapper {
+    display: flex;
+    background-color: var(--white);
+    padding: 3rem 2rem;
+    gap: 5rem;
+
+    @media (max-width: 840px) {
+        flex-direction: column;
+    }
+    h3 {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+    }
+    .payment-info {
+        flex-basis: 60%;
+
+        .form {
+            width: 100%;
+            padding: 0 2rem;
+            margin-top: 1.5rem;
+
+            @media (max-width: 740px) {
+                padding: 0 .5rem;
+            }
+
+            .input-wrapper {
+                margin-bottom: 1.2rem;
+            }
+
+            .textarea {
+                min-height: 10rem;
+                height: 10rem;
+            }
+            
+        }
+
+        .row {
+            display: flex;
+            gap: 1rem;
+            align-items: end;
+            width: 100%;
+            @media (max-width: 740px) {
+                display: block;
+            }
+        }
+
+    }
+
+    .order {
+        font-size: 1.44rem;
+        border: 2px solid var(--primary);
+        border-radius: .5rem;
+        padding: 3rem;
+        user-select: none;
+        min-width: 40%;
+        @media (max-width: 740px) {
+            padding: 3rem 1rem;
+        }
+
+        .label,.price {
+            font-weight: 600;
+        }
+
+        .button-order {
+            margin-top: 3rem;
+            background-color: #2e903b;
+            border-color: #2e903b;
+            text-transform: uppercase;
+        }
+        table {
+            margin-top: 2rem;
+            th {
+                border-bottom: 3px solid #ececec;
+                &:nth-child(1) {
+                    text-align: start;
+                }
+                &:nth-child(2) {
+                    text-align: end;
+                }
+            }
+
+            td {
+                &:nth-child(1) {
+                    padding: 1.5rem 1rem;
+                    padding-left: 0;
+                    width: 70%;
+
+                }
+                &:nth-child(2) {
+                    padding: 1.5rem 1rem;
+                    padding-right: 0;
+                    text-align: end;
+                    width: 20%;
+                    
+                }
+                border-bottom: 1px solid #ececec;
+            }
+
+            .checkbox-type-payment {
+                display: flex;
+                height: 100%;
+                padding: 0.5rem;
+                align-items: center;
+                cursor: pointer;
+                width: 60%;
+                transition: box-shadow .3s;
+                border-radius: .3rem;
+                user-select: none;
+                &:hover {
+                    box-shadow: rgba(0, 0, 0, 0.3) -1px 1px 5px, rgba(0, 0, 0, 0.22) 0px 8px 10px;
+                }
+                &:active {
+                    opacity: .4;
+                }
+            }
+        }
+    }
+}
+
+.err-select-address {
+    :global {
+        .css-13cymwt-control {
+            border-color: red;
+            box-shadow: inset rgba(226, 9, 9, 0.16) -5px 5px 4px;
+        }
+    }
+}
+.tooltip-address {
+    background-color: #fd3d3d !important;
+    transform: translate3d(0px, 33px, 10px);
+    font-size: 1.2rem !important;
+    @media (max-width: 740px) {
+        transform: translate3d(0px, 33px, 10px);
+
+    }
+
+}

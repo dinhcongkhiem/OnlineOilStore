@@ -1,0 +1,62 @@
+.wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+
+    &:hover {
+        background-color: unset !important;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .content {
+        font-size: 1.6rem;
+        position: absolute;
+        background-color: #fff;
+        min-width: 60rem;
+        text-align: start;
+
+        h3 {
+            text-align: center;
+            background-color: var(--primary);
+            padding: .8rem;
+            color: #fff;
+
+        }
+        .delivery-info {
+            padding: 1rem;
+        }
+        .general-info {
+            margin-bottom: 2rem;
+        }
+        .estimate,.goods-money {
+            p {
+                border-top: 1px solid #cecece;
+                padding: 1rem 0;
+            }
+            span {
+                float: inline-end
+            }
+        }
+        .goods-money  {
+            h4 {
+                border-top: 2px solid #cecece;
+                padding: 1rem 0;
+
+            }
+        }
+    }
+}

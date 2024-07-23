@@ -1,0 +1,58 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 1rem;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align: middle;
+    }
+    strong {
+        font-weight: bolder;
+    }
+     
+    a {
+        color: var(--primary);
+        transition: all .3s;
+        &:hover {
+            display: inline-block;
+            transform: scale(1.04);
+
+        };
+    }
+    .company-img {
+        width: 100%;
+        margin-bottom: 1.5rem;
+
+        figcaption {
+            background: rgba(0, 0, 0, .05);
+            font-size: 1.4rem;
+            font-style: italic;
+            padding: 0.4rem;
+            text-align: center;
+
+        }
+    }
+    .sub-company-img {
+        width: 80%;
+        margin: 1.5rem auto;
+    }
+
+    .title {
+        color: var(--primary);
+        margin-bottom: 1.28rem;
+    }
+
+    p {
+        margin-bottom: 2rem;
+        font-weight: 400;
+    }
+
+    .important {
+        color: #ff0000;
+    }
+}

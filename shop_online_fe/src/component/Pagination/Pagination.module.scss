@@ -1,0 +1,36 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    margin: 2rem;
+    .current-page {
+        background-color: var(--primary);
+        color: var(--white);
+        border-color: var(--primary);
+    }
+    a {
+        display: block;
+        width: 3.3rem;
+        height: 3.3rem;
+        border: .15rem solid var(--black);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 3.3rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        transition: all .3s;
+        cursor: pointer;
+        user-select: none;
+
+        &:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+        &:active {
+            opacity: .3;
+        }
+    }
+}

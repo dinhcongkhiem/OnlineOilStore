@@ -1,0 +1,26 @@
+.btn {
+    padding: 1rem 5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: .5rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: all .3s;
+    user-select: none;
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.3) -1px 1px 5px, rgba(0, 0, 0, 0.22) 0px 8px 10px;
+    }
+    &:active {
+        opacity: .4;
+    }
+    
+}
+
+.outline {
+    background-color: unset;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+
+}
